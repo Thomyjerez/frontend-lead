@@ -15,7 +15,7 @@ export default function AdminDashboard() {
 
   const fetchLeads = async () => {
     try {
-      const response = await fetch('https://lead-machine-backend-99zp.onrender.com/');
+      const response = await fetch('https://lead-machine-backend-99zp.onrender.com/api/leads');
       if (response.ok) {
         const data = await response.json();
         setLeads(data);
@@ -31,7 +31,7 @@ export default function AdminDashboard() {
     if (!window.confirm('¿Estás seguro de que querés borrar este lead?')) return;
 
     try {
-      const response = await fetch(`https://lead-machine-backend-99zp.onrender.com/`, {
+      const response = await fetch(`https://lead-machine-backend-99zp.onrender.com/api/leads/${id}`, {
         method: 'DELETE',
       });
 

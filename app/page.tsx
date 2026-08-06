@@ -29,7 +29,7 @@ export default function Home() {
     setStatus('Procesando solicitud...');
     
     try {
-      const response = await fetch('https://lead-machine-backend-99zp.onrender.com/', {
+      const response = await fetch('https://lead-machine-backend-99zp.onrender.com/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
