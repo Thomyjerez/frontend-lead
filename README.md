@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HogarPro - Landing Page & Lead Generator
 
-## Getting Started
+Una landing page moderna y de alto rendimiento diseñada para empresas de servicios para el hogar. Construida con Next.js y Tailwind CSS, esta interfaz captura clientes potenciales y se comunica con una API REST personalizada para enviar notificaciones en tiempo reala al equipo de ventas.
 
-First, run the development server:
+🔗 *[Ver Demo en Vivo (Vercel)](https://frontend-lead-two.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Características Principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Diseño Moderno (SaaS Look): Interfaz limpia, profesional y orientada a la conversión.
+- Componentización React: Arquitectura modular (`SiteHeader`, `Hero`, `WhyUs`, `ContactForm`, `SiteFooter`).
+- Formulario Integrado: Captura de datos (Nombre, Teléfono, Email, Servicio) con validación de UX.
+- Responsive Design: 100% adaptable a dispositivos móviles, tablets y escritorio.
+- Notificaciones en Tiempo Real: Conectado a un backend externo que dispara alertas instantáneas a Telegram.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Stack Tecnológico
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*Frontend:
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Despliegue: [Vercel](https://vercel.com/)
 
-## Learn More
+* Backend (Ecosistema Integrado):
+- La página consume una API construida en Python (FastAPI) alojada en Render.
+- Manejo de notificaciones vía *Telegram Bot API*.
 
-To learn more about Next.js, take a look at the following resources:
+# Arquitectura del Sistema
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El flujo de captura de leads funciona de la siguiente manera:
+1. El usuario completa el formulario en la landing page (Vercel).
+2. El frontend realiza una petición HTTP POST asíncrona enviando un JSON al backend.
+3. El backend en Render procesa la solicitud, estructura el mensaje y se comunica con la API de Telegram.
+4. El especialista recibe el lead instantáneamente en su celular para coordinar la visita.
+5. El usuario es redirigido a una página de agradecimiento.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Autor
+Desarrollado por Thomas Jerez.
 
-## Deploy on Vercel
+GitHub: @ThomyJerez
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LinkedIn: https://www.linkedin.com/in/thomas-jerez/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
